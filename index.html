@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Автосервис Авто Drom — ремонт и техническое обслуживание автомобилей."
+    >
+
+    <title>Авто Drom — автосервис</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="container header-inner">
+
+        <a href="#top" class="logo">
+            <img src="images/logo.jpg" alt="Авто Drom">
+        </a>
+        <img src="images/text.jpg" alt="Авто Drom текст" class="header-text">
+        <nav class="nav" id="nav">
+
+            <a href="#services">Услуги</a>
+            <a href="#about">О нас</a>
+            <a href="#prices">Цены</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#contacts">Контакты</a>
+
+        </nav>
+
+        <div class="header-right">
+
+            <a href="tel:+79501169993" class="phone">
+                +7‒950‒116‒99‒93
+            </a>
+
+            <button class="header-button" onclick="openBooking()">
+                Записаться
+            </button>
+
+        </div>
+
+        <button class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<main id="top">
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <div class="hero-label">
+            <span></span>
+            АВТОСЕРВИС
+        </div>
+
+        <h1>
+            РЕМОНТИРУЕМ<br>
+            <strong>АВТОМОБИЛИ</strong>
+            <br>БЕЗ ЛИШНЕЙ СУЕТЫ
+        </h1>
+
+        <p class="hero-text">
+            Диагностика, ремонт и техническое обслуживание
+            автомобилей. Честно объясняем проблему и заранее
+            согласовываем стоимость работ.
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="button button-red" onclick="openBooking()">
+                Записаться на сервис
+                <span>→</span>
+            </button>
+
+            <a href="#services" class="button button-outline">
+                Смотреть услуги
+            </a>
+
+        </div>
+
+        <div class="hero-stats">
+
+            <div>
+                <strong>20+</strong>
+                <span>лет опыта</span>
+            </div>
+
+            <div>
+                <strong>10000+</strong>
+                <span>автомобилей</span>
+            </div>
+
+            <div>
+                <strong>5.0</strong>
+                <span>рейтинг клиентов ("2ГИС")</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="scroll-down">
+        <span>SCROLL</span>
+        ↓
+    </div>
+
+</section>
+
+
+<!-- ================= QUICK BOOKING ================= -->
+
+<section class="quick-booking">
+
+    <div class="container">
+
+        <div class="quick-card">
+
+            <div class="quick-title">
+                <span class="red-line"></span>
+
+                <div>
+                    <small>ОНЛАЙН-ЗАПИСЬ</small>
+                    <h2>Запишитесь на обслуживание</h2>
+                </div>
+            </div>
+
+            <button class="button button-red" onclick="openBooking()">
+                Оставить заявку →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="section services" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-number">01 / УСЛУГИ</span>
+
+                <h2>
+                    ВСЁ НЕОБХОДИМОЕ<br>
+                    <span>В ОДНОМ МЕСТЕ</span>
+                </h2>
+            </div>
+
+            <p>
+                От планового ТО до сложного ремонта.
+                Перед началом работ проводим диагностику
+                и согласовываем стоимость.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+            <article class="service-card">
+
+                <div class="service-image image-1"></div>
+
+                <div class="service-content">
+
+                    <span class="service-number">01</span>
+
+                    <h3>Диагностика автомобиля</h3>
+
+                    <div class="service-bottom">
+                        <span>от 500 ₽</span>
+
+                        <button onclick="selectService('Диагностика')">
+                            →
+                        </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-image image-2"></div>
+
+                <div class="service-content">
+
+                    <span class="service-number">02</span>
+
+                    <h3>Техническое обслуживание</h3>
+
+                    <p>
+                        Замена масла, фильтров, технических
+                        жидкостей и расходников.
+                    </p>
+
+                    <div class="service-bottom">
+                        <span>от 800 ₽</span>
+
+                        <button onclick="selectService('Техническое обслуживание')">
+                            →
+                        </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-image image-3"></div>
+
+                <div class="service-content">
+
+                    <span class="service-number">03</span>
+
+                    <h3>Ходовая часть</h3>
+
+                    <p>
+                        Ремонт подвески,
+                        тормозной системы и рулевого управления.
+                    </p>
+
+                    <div class="service-bottom">
+                        <span>от 1 500 ₽</span>
+
+                        <button onclick="selectService('Ремонт ходовой части')">
+                            →
+                        </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-image image-4"></div>
+
+                <div class="service-content">
+
+                    <span class="service-number">04</span>
+
+                    <h3>Двигатель</h3>
+
+                    <p>
+                        Диагностика неисправностей и ремонт
+                        бензиного двигателя любой сложности.
+                    </p>
+
+                    <div class="service-bottom">
+                        <span>от 3 000 ₽</span>
+
+                        <button onclick="selectService('Ремонт двигателя')">
+                            →
+                        </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        <div class="all-services">
+
+            <button class="text-button" onclick="openBooking()">
+                Не нашли нужную услугу? Расскажите, что случилось →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about section" id="about">
+
+    <div class="container about-grid">
+
+        <div class="about-photo">
+
+            <div class="about-badge">
+                <strong>20+</strong>
+                <span>лет<br>работы</span>
+            </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="section-number">02 / АВТО DROM</span>
+
+            <h2>
+                АВТОСЕРВИС,<br>
+                КОТОРОМУ <span>ДОВЕРЯЮТ</span>
+            </h2>
+
+            <p>
+                Мы занимаемся ремонтом и техническим обслуживанием
+                автомобилей, помогая владельцам поддерживать машину
+                в исправном состоянии.
+            </p>
+
+            <p>
+                Не меняем детали «наугад» — сначала находим причину
+                неисправности, объясняем клиенту ситуацию и только
+                после согласования приступаем к работе.
+            </p>
+
+            <div class="about-points">
+
+                <div>
+                    <span>✓</span>
+                    Честная диагностика
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Согласование стоимости
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Гарантия на работы
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Современное оборудование
+                </div>
+
+            </div>
+
+            <button class="button button-red" onclick="openBooking()">
+                Записаться в сервис →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY US ================= -->
+
+<section class="why section">
+
+    <div class="container">
+
+        <div class="section-heading centered">
+
+            <span class="section-number">03 / ПОЧЕМУ МЫ</span>
+
+            <h2>
+                ПОЧЕМУ ВЛАДЕЛЬЦЫ<br>
+                <span>ВЫБИРАЮТ АВТО DROM</span>
+            </h2>
+
+        </div>
+
+
+        <div class="advantages">
+
+            <div class="advantage">
+
+                <div class="advantage-icon">01</div>
+
+                <h3>Понятные цены</h3>
+
+                <p>
+                    Перед началом ремонта клиент знает,
+                    сколько будет стоить работа.
+                </p>
+
+            </div>
+
+
+            <div class="advantage">
+
+                <div class="advantage-icon">02</div>
+
+                <h3>Без навязанных работ</h3>
+
+                <p>
+                    Рекомендуем только то, что действительно
+                    необходимо автомобилю.
+                </p>
+
+            </div>
+
+
+            <div class="advantage">
+
+                <div class="advantage-icon">03</div>
+
+                <h3>Опытные мастера</h3>
+
+                <p>
+                    Работаем с автомобилями разных марок
+                    и знаем типичные проблемы.
+                </p>
+
+            </div>
+
+
+            <div class="advantage">
+
+                <div class="advantage-icon">04</div>
+
+                <h3>Экономим ваше время</h3>
+
+                <p>
+                    Можно заранее записаться на удобное
+                    время через сайт.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRICES ================= -->
+
+<section class="section prices" id="prices">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-number">04 / ЦЕНЫ</span>
+
+                <h2>
+                    ПОПУЛЯРНЫЕ<br>
+                    <span>РАБОТЫ</span>
+                </h2>
+
+            </div>
+
+            <p>
+                Итоговая стоимость зависит от автомобиля
+                и объёма работ. Точную цену сообщим после диагностики.
+            </p>
+
+        </div>
+
+
+        <div class="price-list">
+
+            <div class="price-row">
+
+                <div>
+                    <span>01</span>
+                    <strong>Замена масла и фильтра</strong>
+                </div>
+
+                <b>от 800 ₽</b>
+
+                <button onclick="selectService('Замена масла и фильтра')">
+                    Записаться →
+                </button>
+
+            </div>
+
+
+            <div class="price-row">
+
+                <div>
+                    <span>02</span>
+                    <strong>Диагностика автомобиля</strong>
+                </div>
+
+                <b>от 500 ₽</b>
+
+                <button onclick="selectService('Диагностика автомобиля')">
+                    Записаться →
+                </button>
+
+            </div>
+
+
+            <div class="price-row">
+
+                <div>
+                    <span>03</span>
+                    <strong>Замена тормозных колодок</strong>
+                </div>
+
+                <b>от 1 500 ₽</b>
+
+                <button onclick="selectService('Замена тормозных колодок')">
+                    Записаться →
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <div class="container cta-inner">
+
+        <div>
+
+            <span>ЕСТЬ ПРОБЛЕМА С АВТО?</span>
+
+            <h2>
+                РАЗБЕРЁМСЯ<br>
+                <strong>ВМЕСТЕ</strong>
+            </h2>
+
+        </div>
+
+        <button class="button button-white" onclick="openBooking()">
+            Получить консультацию →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= REVIEWS ================= -->
+
+<section class="section reviews" id="reviews">
+
+    <div class="container">
+
+        <div class="section-heading centered">
+
+            <span class="section-number">05 / ОТЗЫВЫ</span>
+
+            <h2>
+                ЧТО ГОВОРЯТ<br>
+                <span>НАШИ КЛИЕНТЫ</span>
+            </h2>
+
+        </div>
+
+
+        <div class="reviews-grid">
+
+            <article class="review">
+
+                <div class="review-top">
+                    <strong>Александр</strong>
+                    <span>★★★★★</span>
+                </div>
+
+                <p>
+                    «Приезжал на диагностику и замену расходников.
+                    Всё объяснили, показали, лишнего не навязывали.
+                    Теперь обслуживаюсь здесь.»
+                </p>
+
+                <small>Honda CR-V</small>
+
+            </article>
+
+
+            <article class="review">
+
+                <div class="review-top">
+                    <strong>Дмитрий</strong>
+                    <span>★★★★★</span>
+                </div>
+
+                <p>
+                    «Хороший сервис. Быстро нашли причину проблемы
+                    с подвеской. По цене получилось даже дешевле,
+                    чем рассчитывал.»
+                </p>
+
+                <small>Toyota Camry</small>
+
+            </article>
+
+
+            <article class="review">
+
+                <div class="review-top">
+                    <strong>Мария</strong>
+                    <span>★★★★★</span>
+                </div>
+
+                <p>
+                    «Очень удобно, что можно записаться заранее.
+                    Приехала к назначенному времени — машину сразу
+                    приняли в работу.»
+                </p>
+
+                <small>Kia Rio</small>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACTS ================= -->
+
+<section class="contacts section" id="contacts">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <div class="contact-info">
+
+                <span class="section-number">06 / КОНТАКТЫ</span>
+
+                <h2>
+                    ЖДЁМ ВАС<br>
+                    В <span>АВТО DROM</span>
+                </h2>
+
+                <div class="contact-items">
+
+                    <div>
+                        <small>АДРЕС</small>
+                        <strong>г. Братск, ул. Крупской, 2а</strong>
+                    </div>
+
+                    <div>
+                        <small>ТЕЛЕФОН</small>
+                        <a href="tel:+79501169993">
+                            +7‒950‒116‒99‒93
+                        </a>
+                    </div>
+
+                    <div>
+                        <small>РЕЖИМ РАБОТЫ</small>
+                        <strong>Пн–Сб: 09:00–20:00</strong>
+                    </div>
+
+                </div>
+
+                <button class="button button-red" onclick="openBooking()">
+                    Записаться на обслуживание →
+                </button>
+
+            </div>
+
+
+            <div class="map-placeholder">
+                <iframe src="https://yandex.ru/map-widget/v1/?text=Братск%20улица%20Крупской%202а&ll=101.6,56.1&z=16" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-inner">
+
+        <div class="footer-logo">
+
+            <img src="images/logo.jpg" alt="Авто Drom">
+
+            <span>
+                Ремонт и обслуживание<br>
+                автомобилей
+            </span>
+
+        </div>
+
+        <div class="footer-links">
+            <a href="#services">Услуги</a>
+            <a href="#prices">Цены</a>
+            <a href="#about">О сервисе</a>
+            <a href="#contacts">Контакты</a>
+        </div>
+
+        <div class="footer-copy">
+            © 2026 Авто Drom
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= BOOKING MODAL ================= -->
+
+<div class="modal" id="bookingModal">
+
+    <div class="modal-overlay" onclick="closeBooking()"></div>
+
+    <div class="modal-window">
+
+        <button class="modal-close" onclick="closeBooking()">
+            ×
+        </button>
+
+        <div class="modal-header">
+
+            <span>ОНЛАЙН-ЗАПИСЬ</span>
+
+            <h2>
+                ЗАПИСАТЬСЯ<br>
+                <strong>В АВТО DROM</strong>
+            </h2>
+
+            <p>
+                Заполните форму — мы свяжемся с вами
+                для подтверждения записи.
+            </p>
+
+        </div>
+
+
+        <form id="bookingForm" action="https://formsubmit.co/tysutulaya@yandex.ru" method="POST">
+    <!-- Скрытые поля для настройки FormSubmit -->
+    <input type="hidden" name="_subject" value="☑️🎊 Новая заявка c сайта!">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+
+    <div class="form-group">
+        <label>Ваше имя</label>
+        <input type="text" id="name" name="name" placeholder="Например, Алексей" required>
+    </div>
+
+    <div class="form-group">
+        <label>Телефон</label>
+        <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label>Автомобиль</label>
+            <input type="text" id="car" name="car" placeholder="Toyota Camry">
+        </div>
+
+        <div class="form-group">
+            <label>Услуга</label>
+            <select id="service" name="service">
+                <option value="">Выберите услугу</option>
+                <option>Диагностика</option>
+                <option>Техническое обслуживание</option>
+                <option>Ходовая часть</option>
+                <option>Двигатель</option>
+                <option>Замена масла</option>
+                <option>Другое</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label>Желаемая дата</label>
+            <input type="date" id="date" name="date">
+        </div>
+
+        <div class="form-group">
+            <label>Время</label>
+            <select id="time" name="time">
+                <option value="">Любое</option>
+                <option>09:00</option>
+                <option>10:00</option>
+                <option>11:00</option>
+                <option>12:00</option>
+                <option>13:00</option>
+                <option>14:00</option>
+                <option>15:00</option>
+                <option>16:00</option>
+                <option>17:00</option>
+                <option>18:00</option>
+                <option>19:00</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Что случилось?</label>
+        <textarea id="comment" name="comment" rows="3" placeholder="Опишите проблему или напишите, что нужно сделать"></textarea>
+    </div>
+
+    <button type="submit" class="button button-red submit-button">Отправить заявку →</button>
+</form>
+
+    </div>
+
+</div>
+
+
+<!-- ================= SUCCESS MODAL ================= -->
+
+<div class="success-modal" id="successModal">
+
+    <div class="success-window">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h2>ЗАЯВКА ОТПРАВЛЕНА</h2>
+
+        <p>
+            Спасибо! Мы получили вашу заявку
+            и свяжемся с вами в ближайшее время 🤝.
+        </p>
+
+        <button class="button button-red" onclick="closeSuccess()">
+            Хорошо
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="toast" id="toast">
+    Заявка успешно отправлена
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
