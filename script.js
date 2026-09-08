@@ -121,7 +121,7 @@ bookingForm.addEventListener("submit", function(e) {
     const formData = new FormData(bookingForm);
 
     // Отправляем на FormSubmit через fetch
-    fetch("https://formsubmit.co/tysutulaya@yandex.ru", {
+    fetch("https://formsubmit.co/fisa-zim@mail.ru", {
         method: "POST",
         body: formData
     })
